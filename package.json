@@ -4,7 +4,9 @@
   "description": "Auto loan test calculator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd src; python -m SimpleHTTPServer",
+    "build": "webpack",
+    "build:watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,19 @@
     "css-loader": "^1.0.0",
     "html-loader": "^0.5.5",
     "standard": "^12.0.1",
-    "webpack": "^4.20.2"
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2"
+  },
+  "standard": {
+    "globals": [
+      "CustomEvent",
+      "HTMLElement",
+      "customElements"
+    ],
+    "ignore": [
+      "src/bundle.js"
+    ]
   }
 }
